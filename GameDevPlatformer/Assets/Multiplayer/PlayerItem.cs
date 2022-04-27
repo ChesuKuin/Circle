@@ -11,7 +11,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
     public TMP_Text playerName;
 
 
-    Image backgroundImage;
+    [SerializeField] Image backgroundImage;
     public Color highlightColor;
     public GameObject leftArrowButton;
     public GameObject rightArrowButton;
@@ -24,7 +24,6 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        backgroundImage = GetComponent<Image>();
     }
 
     public void SetPlayerInfo(Player _player)
@@ -43,7 +42,7 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     public void OnClickLeftArrow()
     {
-        if((int)playerProperties["playerAvatar"] == 0)
+        if ((int)playerProperties["playerAvatar"] == 0)
         {
             playerProperties["playerAvatar"] = avatars.Length - 1;
         }
@@ -75,9 +74,9 @@ public class PlayerItem : MonoBehaviourPunCallbacks
         }
     }
 
-    void UpdatePlayerItem (Player player)
+    void UpdatePlayerItem(Player player)
     {
-        if(player.CustomProperties.ContainsKey("playerAvatar"))
+        if (player.CustomProperties.ContainsKey("playerAvatar"))
         {
             playerAvatar.sprite = avatars[(int)player.CustomProperties["playerAvatar"]];
             playerProperties["playerAvatar"] = (int)player.CustomProperties["playerAvatar"];

@@ -23,7 +23,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        PhotonNetwork.JoinLobby();
+
     }
 
     public void OnClickCreate()
@@ -41,6 +41,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         roomName.text = "Room Name: " + PhotonNetwork.CurrentRoom.Name;
         UpdatePlayerList();
     }
+
 
     public void JoinRoom()
     {
@@ -72,7 +73,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     void UpdatePlayerList()
     {
-        foreach(PlayerItem item in playerItemsList)
+        foreach (PlayerItem item in playerItemsList)
         {
             Destroy(item.gameObject);
         }
@@ -109,7 +110,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2) 
+        if (PhotonNetwork.IsMasterClient && PhotonNetwork.CurrentRoom.PlayerCount >= 2)
         {
             playButton.SetActive(true);
         }
