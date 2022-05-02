@@ -213,15 +213,6 @@ public class PlayerMovement : MonoBehaviour {
 				trail.enabled = false;
 			}
 		}
-
-		if (!pause.isPaused && !levelAdvance.isWon)
-		{
-			Time.timeScale = 1;
-		}
-		else
-		{
-			Time.timeScale = 0;
-		}
 	}
 	}
 }

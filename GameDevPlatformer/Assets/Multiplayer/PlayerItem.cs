@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class PlayerItem : MonoBehaviourPunCallbacks
 {
     public TMP_Text playerName;
-
+    
 
     [SerializeField] Image backgroundImage;
     public Color highlightColor;
@@ -24,6 +24,8 @@ public class PlayerItem : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        playerProperties["playerAvatar"] = 0;
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
     }
 
     public void SetPlayerInfo(Player _player)
