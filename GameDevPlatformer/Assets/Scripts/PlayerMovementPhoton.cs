@@ -8,6 +8,8 @@ public class PlayerMovementPhoton : MonoBehaviour {
 
 	PhotonView view;
 
+	[SerializeField] private AudioSource jumpSound;
+
 	public float jumpHeight = 2;
 	public float timeToGroundDecelerate;
 	public float timeToJumpApex = 0.3f;
@@ -175,6 +177,7 @@ public class PlayerMovementPhoton : MonoBehaviour {
 				if (controller.collisions.below)
 				{
 					velocity.y = jumpVelocity;
+				jumpSound.Play();
 				}
 			}
 
