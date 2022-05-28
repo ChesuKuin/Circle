@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class LevelAdvanceScript : MonoBehaviour {
 
 	public bool isWon;
-
+	public string Win1;
 	public GameObject nextLevelMenuCanvas;
 	public GameObject player;
 	public GameManager gameManager;
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.name == "Player 1") {
 			isWon = true;
+			Win1 += 1;
 		}
 	}
 
@@ -31,7 +32,7 @@ public class LevelAdvanceScript : MonoBehaviour {
 	void Update() {
 		if (isWon) {
 			nextLevelMenuCanvas.SetActive(true);
-
+			
 			gameManager.WinLevel();
 			this.enabled = false;
 		} else {

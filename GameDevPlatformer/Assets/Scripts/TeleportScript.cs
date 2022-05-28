@@ -6,6 +6,8 @@ public class TeleportScript : MonoBehaviour {
 
 	public GameObject player;
 
+	public string death1;
+
 	public Vector2 destination;
 
 	public float countdownTimer;
@@ -28,6 +30,7 @@ public class TeleportScript : MonoBehaviour {
 				velocity.velocity.y = 0;
 				velocity.trail.time = 0;
 			}
+			death1 += 1;
 		}
 	}
 

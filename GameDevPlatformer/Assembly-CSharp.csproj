@@ -64,11 +64,13 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Multiplayer\Buttons.cs" />
     <Compile Include="Assets\Scripts\DecelerateScript.cs" />
+    <Compile Include="Assets\Multiplayer\ScoreBoardItemScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Multiplayer\SpawnPlayers.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\PauseScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\Multiplayer\ScoreBoard.cs" />
     <Compile Include="Assets\Scripts\LevelSelector.cs" />
     <Compile Include="Assets\Multiplayer\ConnectToServer.cs" />
     <Compile Include="Assets\Scripts\Controller2D.cs" />
@@ -94,9 +96,9 @@
     <Compile Include="Assets\Scripts\SlipScript.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\RayCastController.cs" />
+    <Compile Include="Assets\Multiplayer\TimerMinus.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Multiplayer\TimerMinus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -8,12 +8,13 @@ public class TimerMinus : MonoBehaviour
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public Text timeText;
-    public Image image;
+    public GameObject Disable;
+    [SerializeField] private GameObject image;
     private void Start()
     {
         timerIsRunning = true;
-        image.enabled = false;
-        image = GetComponent<Image>();
+        image.SetActive(false);
+        Disable.SetActive(true);
     }
     void Update()
     {
@@ -27,9 +28,10 @@ public class TimerMinus : MonoBehaviour
             else
             {
                 Debug.Log("Time has run out!");
-                image.enabled = true;
+                image.SetActive(true);
                 timeRemaining = 0;
                 timerIsRunning = false;
+                Disable.SetActive(false);
             }
         }
     }
